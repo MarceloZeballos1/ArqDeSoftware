@@ -1,6 +1,6 @@
 # ArqDeSoftware
 
-# 🧠 Sistema Asistente Virtual UCB
+# Sistema Asistente Virtual UCB
 
 Este sistema representa un **asistente virtual inteligente** diseñado para la Universidad Católica Boliviana. Sus principales funciones son:
 
@@ -12,7 +12,7 @@ Este sistema representa un **asistente virtual inteligente** diseñado para la U
 
 ---
 
-## 🧩 Componentes y su Función
+## Componentes y su Función
 
 | Clase | Descripción |
 |-------|-------------|
@@ -26,35 +26,35 @@ Este sistema representa un **asistente virtual inteligente** diseñado para la U
 
 ---
 
-## 🧠 Patrones de Diseño Utilizados
+## Patrones de Diseño Utilizados
 
-### 1. 🔁 Singleton – `ControladorMain`
+### 1. Singleton – `ControladorMain`
 - Solo puede haber una instancia global del controlador principal.
 - Se usa para coordinar todas las demás clases.
 - El método `obtenerInstancia()` garantiza una única instancia.
 
 ---
 
-### 2. 🧾 Command – `GestorComandos`, `ComandoConsultarHorario`, `ComandoConsultarNotas`
+### 2. Command – `GestorComandos`, `ComandoConsultarHorario`, `ComandoConsultarNotas`
 - Encapsula acciones en objetos.
 - Permite agregar nuevos comandos fácilmente sin modificar el sistema central.
 - Ideal para ejecutar comandos como "Consultar horario", "Consultar notas", etc.
 
 ---
 
-### 3. 🧠 Strategy – `EstrategiaIA`, `EstrategiaOllama`, `EstrategiaGPT`
+### 3. Strategy – `EstrategiaIA`, `EstrategiaOllama`, `EstrategiaGPT`
 - Permite cambiar dinámicamente el motor de IA usado para generar respuestas.
 - `ControladorMain` o alguna parte del sistema podría decidir cuál usar según configuración.
 
 ---
 
-### 4. 👀 Observer – `ObservadorRespuestas`
+### 4. Observer – `ObservadorRespuestas`
 - Se activa cuando se genera una nueva respuesta desde la IA.
 - Podría actualizar la UI, registrar logs o realizar otra acción automática.
 
 ---
 
-## 🔄 Flujo General del Asistente
+## Flujo General del Asistente
 
 1. El usuario escribe una pregunta o comando.
 2. `ControladorMain` recibe la entrada.
